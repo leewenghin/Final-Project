@@ -8,7 +8,7 @@ h1,h2,h3,h4,h5{
 }
 
 .login_page_bng{
-    background-color: #FAEAB1;
+    background-color: #E4E9F7;
 }
 
 /* Side Navigation */
@@ -19,23 +19,48 @@ h1,h2,h3,h4,h5{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #FECD70;
+  background-color: white;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidenav{
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.navbar {
+  background-color: #b9ccfa !important;
+}
+
 .sidenav a {
-  padding: 8px 8px 8px 0px;
+  padding: 8px 20px 8px 20px;
   text-decoration: none;
-  font-size: 25px;
-  color: #272829;
+  font-size: 20px;
+  color: #707070;
   display: block;
   transition: 0.3s;
+  height: 50px;
+  border-radius: 5px !important;
+  display: flex;
+}
+
+.list-group a{
+  align-items: center;
+
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  background-color: #695CFE;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .sidenav .closebtn {
@@ -44,6 +69,36 @@ h1,h2,h3,h4,h5{
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.sidenav-profile {
+  color: #707070;
+}
+
+.list-group-top {
+  padding: 0 15px 0 15px;
+}
+
+.list-group-item {
+  border: none;
+  text-align: left;
+}
+
+.list-group-item i{
+  transition: transform 0.1s ease;
+}
+
+.list-group-item[aria-expanded="true"] i{
+  transform: rotate(90deg);
+}
+
+.list-group-item.active {
+  background-color: white;
+  color: #695CFE;
+}
+
+#collapseAdmin {
+  padding: 0 15px 0 15px;
 }
 
 #main {
