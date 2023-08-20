@@ -24,6 +24,7 @@
                 </div>
             </div>
         </form>
+        
 
         @include('components.action_message')
         <input type="hidden" id="create_new_verified_complaint" name="url" value="{{ route('helpdesk.verified_complaints.create') }}"/>
@@ -31,7 +32,7 @@
         <form id="form" action="{{ route('helpdesk.verified_complaints.create') }}" method="POST">
             @csrf
             <table id="execuativeComplaintTable" class="table table-bordered table-striped table table-hover">
-                <thead class="table-dark">
+                <thead class="table-grey">
                     <tr>
                         <th scope="col" class="d-none d-sm-table-cell">No</th>
                         <th scope="col">Title</th>
@@ -42,7 +43,6 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider table-secondary">
-                    {{-- zi keong - loop all the content base on the database, --}}
                     @if ($complaints->count() > 0)
                         @foreach ($complaints as $complaint)
                             <tr>

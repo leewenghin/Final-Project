@@ -13,7 +13,7 @@
     </div>
     @include('components.action_message')
     <table id="userProfileTable" class="table table-bordered table-striped">
-        <thead class="table-dark">
+        <thead class="table-grey">
           <tr>
             <th scope="col" class="d-none d-sm-table-cell">No</th>
             <th scope="col" class="d-none d-sm-table-cell">Username</th>

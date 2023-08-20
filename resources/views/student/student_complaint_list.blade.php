@@ -31,7 +31,7 @@
         </div>
         @include('components.action_message')
         <table id="studentComplaintTable" class="table table-bordered table-striped table table-hover">
-            <thead class="table-dark">
+            <thead class="table-grey">
                 <tr>
                     <th scope="col" class="d-none d-sm-table-cell">No</th>
                     <th scope="col">Title</th>

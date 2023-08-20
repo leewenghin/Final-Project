@@ -69,8 +69,9 @@
                 @if (Auth::user()->HasRole())
                 <div class="list-group hover_chg_text_clr">
                     @if (Auth::user()->IsHelpDesk())
-                    <a data-bs-toggle="collapse" href="#collapseHelpdesk" role="button" aria-expanded="false" aria-controls="collapseHelpdesk" class="list-group-item list-group-item-action h5 m-0 justify-content-between @if(Request::is('help-desk/*')) active @endif">
-                        Help Desk
+                    <a data-bs-toggle="collapse" href="#collapseHelpdesk" role="button" aria-expanded="false" aria-controls="collapseHelpdesk" class="list-group-item list-group-item-action h5 @if(Request::is('help-desk/*')) active @endif">
+                        <img src="/images/support.png" alt="customer-support.png" height="30px">
+                        <span>Help Desk</span>
                         <i class="fa-solid fa-chevron-right fa-2xs"></i>
                     </a>
                     <div id="collapseHelpdesk" class="collapse">
@@ -80,26 +81,25 @@
                     </div>
                     @endif
                     @if (Auth::user()->IsExecutive())
-                    <a href="{{ route('executive.dashboard') }}" class="list-group-item list-group-item-action h5 @if(Request::is('executive/*')) active @endif">Executive</a>
+                    <a href="{{ route('executive.dashboard') }}" class="list-group-item list-group-item-action h5 @if(Request::is('executive/*')) active @endif">
+                        <img src="/images/complaint.png" alt="executive.png" height="30px">
+                        <span>Executive</span></a>
                     @endif
                     @if (Auth::user()->IsAdmin())
                     <a data-bs-toggle="collapse" href="#collapseAdmin" role="button" aria-expanded="false" aria-controls="collapseAdmin" class="list-group-item list-group-item-action h5 justify-content-between @if(Request::is('administrator/*')) active @endif">
-                        Administrator
+                        <img src="/images/administrator.png" alt="administrator.png" height="30px">
+                        <span>Administrator</span>
                         <i class="fa-solid fa-chevron-right fa-2xs"></i>
                     </a>
+                    <div id="collapseAdmin" class="collapse">
+                        <a href="{{ route('users.index') }}">User Profile List</a>
+                        <a href="{{ route('departments.index') }}">Department List</a>
+                    </div>
                     @endif
+
                 </div>
                 @endif
             </div>
-
-            @if (Auth::user()->HasRole())
-            @if (Auth::user()->IsAdmin())
-            <div id="collapseAdmin" class="collapse">
-                <a href="{{ route('users.index') }}">User Profile List</a>
-                <a href="{{ route('departments.index') }}">Department List</a>
-            </div>
-            @endif
-            @endif
         </div>
     </div>
     @endif
