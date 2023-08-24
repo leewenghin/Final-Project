@@ -17,11 +17,17 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('dist/bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"> -->
 
     <!-- Scripts -->
     <script src="{{ asset('dist/jquery/jquery-3.6.3.min.js') }}"></script>
     <script src="{{ asset('dist/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +43,9 @@
     <div class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container d-flex justify-content-between">
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+            <!-- <a href="{{ route('home') }}" class="text-decoration-none justify-content-center">
+                <h2 class="text-center m-0">e-Complaint</h2>
+            </a> -->
             <div>
                 <h4 class="m-auto">{{ Auth::user()->first_name.' '.Auth::user()->last_name }}</h4>
                 <div class="d-flex justify-content-between">

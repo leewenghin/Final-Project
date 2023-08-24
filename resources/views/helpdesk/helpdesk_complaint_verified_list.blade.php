@@ -6,16 +6,16 @@
         <form id="search_filter_form" class="mb-3" action="{{ route('helpdesk.verified_complaints.index') }}" method="GET">
             <div class="d-md-flex d-block justify-content-between">
                 <div class="col-md-5 col-12 mb-md-0 mb-2">
-                    <div class="input-group rounded">
-                        <input type="text" name="search" value="{{ request()->query('search') }}" class="form-control rounded" placeholder="Search Title"
+                    <div class="input-group">
+                        <input type="text" name="search" value="{{ request()->query('search') }}" class="form-control shadow-none" placeholder="Search title"
                             aria-label="Search" aria-describedby="search-addon" />
-                        <span class="input-group-text border-0" id="search-addon">
-                            <input class="btn btn-info" type="submit">
+                        <span class="input-group-text border bg-success" id="search-addon">
+                            <input class="btn text-white" type="submit" value="Search">
                         </span>
                     </div>
                 </div>
                 <div class="col-md-5 col-12">
-                    <select class="form-select" id="status_filter" name="status_filter">
+                    <select class="form-select shadow-none" id="status_filter" name="status_filter">
                         <option value="">Choose a status...</option>
                         @foreach ($statuses as $status)
                             @if (!($status->id == 1))

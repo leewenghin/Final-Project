@@ -12,7 +12,7 @@
 
                     <div class="app_name m-3">
                         <h1 class="text-center">
-                            NEUC e-Complaint System
+                            e-Complaint System
                         </h1>
                     </div>
 
@@ -68,7 +68,7 @@
                                 </div>
 
                                 <div class="col-12 d-flex justify-content-center mt-2">
-                                    <a class="btn btn-link" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">
+                                    <a class="btn btn-link text-decoration-none" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 </div>

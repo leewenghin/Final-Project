@@ -91,4 +91,8 @@ $(document).ready(function(){
             $("#select_department").attr("required", false);
         }
     });
+
+    // $(document).ready(function() {
+    //     $('#execuativeComplaintTable').DataTable();
+    // });
 });
