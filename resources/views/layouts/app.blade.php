@@ -77,6 +77,10 @@
 
                 @if (Auth::user()->HasRole())
                 <div class="list-group hover_chg_text_clr">
+                <!-- <a href="{{ route('home') }}" class="text-decoration-none justify-content-center">
+                <img src="/images/support.png" alt="customer-support.png" height="30px">
+                <span class="h5">Complainant</span>
+                </a> -->
                     @if (Auth::user()->IsHelpDesk())
                     <a data-bs-toggle="collapse" href="#collapseHelpdesk" role="button" aria-expanded="false" aria-controls="collapseHelpdesk" class="list-group-item list-group-item-action h5 @if(Request::is('help-desk/*')) active @endif">
                         <img src="/images/support.png" alt="customer-support.png" height="30px">
@@ -85,8 +89,8 @@
                     </a>
                     <div id="collapseHelpdesk" class="collapse">
                         <a href="{{ route('helpdesk.dashboard') }}">Dashboard</a>
-                        <a href="{{ route('helpdesk.complaints.index') }}">Complaints</a>
-                        <a href="{{ route('helpdesk.verified_complaints.index') }}">Ongoing</a>
+                        <a href="{{ route('helpdesk.complaints.index') }}">All Complaints</a>
+                        <a href="{{ route('helpdesk.verified_complaints.index') }}">Ongoing Complaints</a>
                     </div>
                     @endif
                     @if (Auth::user()->IsExecutive())
